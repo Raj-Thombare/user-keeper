@@ -1,4 +1,4 @@
-import "./NewUser.module.css";
+import  classes from "./NewUser.module.css";
 import Card from "../UI/Card";
 import { useState } from "react";
 import Button from '../UI/Button'
@@ -53,9 +53,9 @@ const NewUser = (props) => {
     <div>
       {error && <ErrorModal title={error.title} message={error.message} onConfirm={errorHandler} />}
       <form onSubmit={submitHandler}>
-        <div className="card_container">
-          <Card className="form_container">
-            <div className="input_container">
+        <div className={classes.card_container}>
+          <Card className={classes.form_container}>
+            <div className={classes.input_container}>
               <label>Username</label>
               <input
                 type="text"
@@ -63,7 +63,7 @@ const NewUser = (props) => {
                 onChange={getUserNameHandler}
               />
             </div>
-            <div className="input_container">
+            <div className={classes.input_container}>
               <label>Age (years)</label>
               <input
                 type="number"
@@ -71,7 +71,7 @@ const NewUser = (props) => {
                 onChange={getUserAgeHandler}
               />
             </div>
-            <div className="input_container">
+            <div className={classes.input_container}>
               <Button type="submit">Add User</Button>
             </div>
           </Card>
