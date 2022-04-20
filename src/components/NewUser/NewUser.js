@@ -23,6 +23,8 @@ const NewUser = (props) => {
       age:enteredAge
     }
     props.onGetUserData(newUserData);
+    setEnteredName('');
+    setEnteredAge('');
   }
 
   return (
@@ -31,11 +33,11 @@ const NewUser = (props) => {
         <Card className="form_container">
           <div>
             <label>Username</label>
-            <input type="text" onChange={getUserNameHandler} />
+            <input type="text" value={enteredName} onChange={getUserNameHandler} />
           </div>
           <div>
             <label>Age (years)</label>
-            <input type="number" onChange={getUserAgeHandler}/>
+            <input type="number" value={enteredAge} onChange={getUserAgeHandler}/>
           </div>
           <div>
             <button type="submit">Add User</button>
