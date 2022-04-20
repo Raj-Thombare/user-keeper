@@ -2,10 +2,12 @@ import "./NewUser.css";
 import Card from "../UI/Card";
 import { useState } from "react";
 import Button from '../UI/Button'
+import ErrorModal from '../UI/ErrorModal'
 
 const NewUser = (props) => {
   const [enteredName, setEnteredName] = useState("");
   const [enteredAge, setEnteredAge] = useState("");
+  const [error, setError] = useState();
 
   const getUserNameHandler = (e) => {
     setEnteredName(e.target.value);
@@ -17,6 +19,22 @@ const NewUser = (props) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
+
+    if(enteredName.trim().length === 0 || enteredAge.trim().length === 0){
+      setError({
+        title:'Invalid Input',
+        message:'Please enter valid name and age (non-empty values).'
+      })
+      return;
+    }
+
+    if(enteredAge < 1){
+      setError({
+        title:'Invalid Age',
+        message:'Please enter a valid age!( > 1).'
+      })
+    }
+    
     const newUserData = {
       id: Math.random().toString(),
       username: enteredName,
@@ -27,8 +45,13 @@ const NewUser = (props) => {
     setEnteredAge("");
   };
 
+  const errorHandler = () => {
+    setError(null)
+  }
+
   return (
     <div>
+      {error && <ErrorModal title={error.title} message={error.message} onConfirm={errorHandler} />}
       <form onSubmit={submitHandler}>
         <div className="card_container">
           <Card className="form_container">
