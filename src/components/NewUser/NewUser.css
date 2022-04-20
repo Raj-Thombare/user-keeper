@@ -18,6 +18,15 @@ form {
   text-align: left;
 }
 
+.card_container {
+  width: 38rem;
+}
+
+.input_container {
+  width: 100%;
+  padding: 0px 20px;
+}
+
 .form_container label {
   display: block;
   font-weight: bold;
@@ -29,8 +38,7 @@ form {
   padding: 0.5rem;
   border-radius: 6px;
   border: 1px solid #ccc;
-  width: 35rem;
-  max-width: 100%;
+  width: 90%;
 }
 
 .form_container button {
