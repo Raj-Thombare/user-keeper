@@ -1,0 +1,11 @@
+button {
+    font: inherit;
+    cursor: pointer;
+    padding: .5rem 1.5rem;
+    border: 1px solid darkblue;
+    background-color: darkblue;
+    color: white;
+    font-weight: bold;
+    margin-right: 1rem;
+    text-align: left;
+  }
