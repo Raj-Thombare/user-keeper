@@ -1,0 +1,15 @@
+.content_container {
+    border: 2px solid #3535f1;
+}
+
+.list__content {
+    margin: 15px 0px;
+    padding: 20px;
+}
+
+.content {
+    margin: 0px;
+    padding: 10px;
+    font-weight: 600;
+}
+
