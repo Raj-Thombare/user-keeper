@@ -1,5 +1,5 @@
 import UserList from "./UserList";
-import './Users.css'
+import './Users.module.css'
 
 const Users = (props) => {
   const usersArray = props.data;

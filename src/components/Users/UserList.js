@@ -1,4 +1,4 @@
-import './UserList.css'
+import './UserList.module.css'
 import Card from '../UI/Card'
 
 const UserList = ({username, age}) => {
