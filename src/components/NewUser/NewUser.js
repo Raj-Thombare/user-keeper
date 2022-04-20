@@ -1,10 +1,11 @@
 import './NewUser.css'
+import Card from '../UI/Card'
 
-const NewUser = () => {
+const NewUser = (props) => {
   return (
     <div>
       <form>
-        <div className="form_container card">
+        <Card className="form_container">
           <div>
             <label>Username</label>
             <input type="text" />
@@ -16,7 +17,7 @@ const NewUser = () => {
           <div>
             <button type="submit">Add User</button>
           </div>
-        </div>
+        </Card>
       </form>
     </div>
   );
