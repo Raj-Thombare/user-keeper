@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState, Fragment } from "react";
 import "./App.css";
 import NewUser from "./components/Users/NewUser";
 import Users from "./components/Users/Users";
-import { useState } from "react";
 
 const dummy_users = [];
 
@@ -14,10 +13,10 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <>
       <NewUser onGetUserData={userDataHandler} />
       <Users data={userData} />
-    </div>
+    </>
   );
 }
 
